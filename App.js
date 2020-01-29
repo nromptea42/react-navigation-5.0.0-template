@@ -21,22 +21,11 @@ enableScreens();
 function StackOne() {
   return (
     <SecondaryStack.Navigator>
-      <SecondaryStack.Screen name="Tabbar" component={Tabbar} options={({ route }) => ({ headerTitle: getHeaderTitle(route) })} />
+      <SecondaryStack.Screen name="Tabbar" component={Tabbar} options={defaultHeader} />
       <SecondaryStack.Screen options={frenchHeader} name="Screen 3" component={Screen3} />
       <SecondaryStack.Screen name="Screen 4" component={Screen4} />
     </SecondaryStack.Navigator>
   );
-}
-
-function getHeaderTitle(route) {
-  // Access the tab navigator's state using `route.state`
-  const routeName = route.state
-    ? // Get the currently active route name in the tab navigator
-      route.state.routes[route.state.index].name
-    : // If state doesn't exist, we need to default to the initial screen
-      // In our case, it's "Screen 1" as that's the first screen inside the navigator
-      'Screen 1';
-  return routeName;
 }
 
 function Tabbar() {

@@ -8,7 +8,7 @@ export class Screen1 extends React.PureComponent {
 
     componentDidMount() {
       console.log('Component 1 did mount');
-      console.log(this.props);
+      // console.log(this.props);
     }
 
     componentWillUnmount() {
