@@ -2,7 +2,6 @@ import * as React from 'react';
 import { View, Text, Button, Platform, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import MyStatusBar from './MyStatusBar';
-import { defaultHeader } from './configureHeader';
 
 export class Screen1 extends React.PureComponent {
 
@@ -61,6 +60,7 @@ export class Screen3 extends React.PureComponent {
 
     componentDidMount() {
       console.log('Component 3 did mount');
+      console.log('this.props 3', this.props);
     }
 
     componentWillUnmount() {
@@ -87,6 +87,7 @@ export class Screen4 extends React.PureComponent {
 
     componentDidMount() {
       console.log('Component 4 did mount');
+      console.log(this.props);
     }
 
     componentWillUnmount() {
