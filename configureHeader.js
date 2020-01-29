@@ -8,7 +8,7 @@ export const defaultHeader = {
     // headerLeftContainerStyle: { width: '24%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue' },
 
     headerTitleAlign: 'center',
-    headerTitle: (a, b, c) => <Text numberOfLines={1}>Header title plutot long oui vraiment haha encore plus long alors hehe</Text>,
+    headerTitle: () => <Text numberOfLines={1}>Header title plutot long oui vraiment haha encore plus long alors hehe</Text>,
     headerTitleContainerStyle: { width: '50%', height: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' },
 
     // headerRight: () => <Text>Header right</Text>,
