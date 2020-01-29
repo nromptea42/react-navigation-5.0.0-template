@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { View, Text, Button, Platform, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import MyStatusBar from './MyStatusBar';
 
 export class Screen1 extends React.PureComponent {
 
@@ -17,7 +16,6 @@ export class Screen1 extends React.PureComponent {
     render() {
       return (
         <View style={{ flex: 1, backgroundColor: 'green' }}>
-          <MyStatusBar navigation={this.props.navigation} statusBarStyle={'light-content'} statusBarBackgroundColor={'black'} />
           <Text>Screen 1</Text>
           <Button title="Navigate to Screen 1" onPress={() => this.props.navigation.navigate('Screen 1')} color={Platform.OS === 'ios' ? 'white' : undefined} />
           <Button title="Navigate to Screen 2" onPress={() => this.props.navigation.navigate('Screen 2')} color={Platform.OS === 'ios' ? 'white' : undefined} />
@@ -43,7 +41,6 @@ export class Screen2 extends React.PureComponent {
     render() {
       return (
         <View style={{ flex: 1, backgroundColor: 'red' }}>
-          <MyStatusBar navigation={this.props.navigation} statusBarStyle={'light-content'} statusBarBackgroundColor={'black'} />
           <Text>Screen 2</Text>
           <Button title="Navigate to Screen 1" onPress={() => this.props.navigation.navigate('Screen 1')} color={Platform.OS === 'ios' ? 'white' : undefined} />
           <Button title="Navigate to Screen 2" onPress={() => this.props.navigation.navigate('Screen 2')} color={Platform.OS === 'ios' ? 'white' : undefined} />
@@ -70,7 +67,6 @@ export class Screen3 extends React.PureComponent {
     render() {
       return (
         <View style={{ flex: 1, backgroundColor: 'pink' }}>
-          <MyStatusBar navigation={this.props.navigation} statusBarStyle={'dark-content'} statusBarBackgroundColor={'white'} />
           <Text>Screen 3</Text>
           <Button title="Navigate to Screen 1" onPress={() => this.props.navigation.navigate('Screen 1')} color={Platform.OS === 'ios' ? 'white' : undefined} />
           <Button title="Navigate to Screen 2" onPress={() => this.props.navigation.navigate('Screen 2')} color={Platform.OS === 'ios' ? 'white' : undefined} />

@@ -11,7 +11,7 @@ import { StatusBar } from 'react-native';
 
 import { defaultHeader, frenchHeader } from './configureHeader';
 import { Screen1, Screen2, Screen3, Screen4, Screen5, Screen6 } from './Screens';
-import MyStackScreenComponent from './MyStackScreenComponent';
+import HOCScreenComponent from './HOCScreenComponent';
 
 const MainStack = createStackNavigator();
 const SecondaryStack = createStackNavigator();
@@ -24,7 +24,7 @@ function StackOne() {
     <SecondaryStack.Navigator>
       <SecondaryStack.Screen name="Tabbar" component={Tabbar} options={defaultHeader} />
       <SecondaryStack.Screen options={frenchHeader} name="Screen 3" component={Screen3} />
-      <SecondaryStack.Screen name="Screen 4" component={({ navigation, route }) => MyStackScreenComponent({ navigation, statusBarStyle: 'dark-content', statusBarBackgroundColor: 'white', screen: <Screen4 navigation={navigation} route={route} /> })} />
+      <SecondaryStack.Screen name="Screen 4" component={Screen4} />
     </SecondaryStack.Navigator>
   );
 }
